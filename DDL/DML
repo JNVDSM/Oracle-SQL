@@ -1,0 +1,36 @@
+alter table student rename column  student to percentage;
+
+select * from tabs;
+
+select * from students_data;
+truncate table student;
+rollback;
+
+update students set regno ='20K61A0498' where sno=2;
+commit;
+ROLLBACK;
+
+delete from students where sno=1;
+rollback;
+
+rollback;
+
+alter table students add total_backlogs number(1);
+
+
+update  students set total_backlogs=0;
+
+select * from emp_copy;
+
+insert into student(rollno) values('20k61a0497');
+
+alter table students modify total_backlogs number(1);
+
+create table students2 as select * from students;
+
+truncate table students;
+
+
+insert into students (select * from students2);
+
+rename students to students_data;
